@@ -1,3 +1,13 @@
+/* =========================================
+   SCANMARK
+   Pastel Blue + Lavender Design
+========================================= */
+
+
+/* =========================================
+   BASIC RESET
+========================================= */
+
 * {
     box-sizing: border-box;
 }
@@ -6,204 +16,1100 @@ html,
 body {
     margin: 0;
     min-height: 100%;
-    font-family: Arial, sans-serif;
-    color: #18364d;
 }
 
 body {
-    background: linear-gradient(135deg, #dff3ff, #e8ddff);
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #203f55;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff5ff 0%,
+            #eaf3ff 45%,
+            #eee7ff 100%
+        );
 }
 
 button {
     font-family: inherit;
 }
 
-/* MAIN CONTAINER */
 
-.container {
-    width: min(900px, 92%);
-    min-height: 90vh;
-    margin: 5vh auto;
-    background: white;
-    border-radius: 30px;
-    padding: 50px;
-    box-shadow: 0 20px 60px rgba(36, 91, 138, 0.18);
-    text-align: center;
-}
 
-/* HEADER */
+/* =========================================
+   MAIN AREA
+========================================= */
 
-header h1 {
-    margin: 0;
-    font-size: 58px;
-    color: #4b9bd1;
-    letter-spacing: -2px;
-}
+.app {
 
-.tagline {
-    margin-top: 8px;
-    color: #7193a8;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
+    min-height: 100vh;
 
-/* MESSAGE SECTION */
+    display: flex;
 
-.message-section {
-    margin-top: 50px;
-}
+    align-items: center;
 
-.small-title {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 12px;
-    background: #eef8ff;
-    color: #3980ad;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
+    justify-content: center;
 
-.message-section h2 {
-    margin: 25px 0 15px;
-    font-size: 48px;
-    line-height: 1;
-    color: #244b67;
-}
+    padding: 28px;
 
-.description {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: #718797;
-    line-height: 1.7;
-    font-size: 15px;
-}
-
-/* QUOTE */
-
-.message {
     position: relative;
-    max-width: 680px;
-    margin: 0 auto 25px;
-    padding: 40px 35px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #f3faff, #faf7ff);
-    border: 1px solid #d8ebf8;
+
     overflow: hidden;
 }
 
-.quote-mark {
+
+/* Background decorations */
+
+.app::before,
+.app::after {
+
+    content: "";
+
     position: absolute;
-    right: 20px;
-    top: -25px;
-    font-family: Georgia, serif;
-    font-size: 120px;
-    color: #e2f0fa;
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+
+    opacity: 0.72;
+
+    pointer-events: none;
 }
 
-.message #quote {
+.app::before {
+
+    width: 390px;
+    height: 390px;
+
+    background: #c7eaff;
+
+    left: -150px;
+    top: -150px;
+}
+
+.app::after {
+
+    width: 340px;
+    height: 340px;
+
+    background: #ddd3ff;
+
+    right: -120px;
+    bottom: -120px;
+}
+
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.shell {
+
+    width: min(1060px, 100%);
+
+    display: grid;
+
+    grid-template-columns:
+        0.92fr
+        1.08fr;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 7px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 42px;
+
+    box-shadow:
+        0 28px 80px rgba(
+            44,
+            94,
+            125,
+            0.18
+        );
+
+    overflow: hidden;
+
     position: relative;
+
     z-index: 1;
-    margin: 0 0 18px;
-    font-family: Georgia, serif;
+}
+
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.brand-side {
+
+    padding: 42px;
+
+    position: relative;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            155deg,
+            #73c5f5 0%,
+            #a7ddfb 53%,
+            #d9ceff 100%
+        );
+}
+
+
+/* Decorative stars */
+
+.brand-side::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 42px;
+
+    top: 72px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 45px;
+}
+
+.brand-side::after {
+
+    content: "✧";
+
+    position: absolute;
+
+    left: 32px;
+
+    bottom: 105px;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 32px;
+}
+
+
+
+/* =========================================
+   BUBBLES
+========================================= */
+
+.bubble {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.22
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    pointer-events: none;
+}
+
+.bubble.one {
+
+    width: 220px;
+    height: 220px;
+
+    right: -90px;
+    top: -85px;
+}
+
+.bubble.two {
+
+    width: 130px;
+    height: 130px;
+
+    left: -55px;
+    bottom: 25px;
+}
+
+.bubble.three {
+
+    width: 46px;
+    height: 46px;
+
+    right: 18%;
+    bottom: 15%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.28
+        );
+}
+
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand-header {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.logo {
+
+    font-size: 40px;
+
+    font-weight: 950;
+
+    letter-spacing: -2.5px;
+
+    color: #285a7d;
+}
+
+.logo span {
+
+    color: white;
+}
+
+.tagline {
+
+    margin-top: 8px;
+
+    color: #255b83;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.11em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* =========================================
+   DECORATIVE SPARKLES
+========================================= */
+
+.spark {
+
+    position: absolute;
+
+    color: white;
+
     font-size: 25px;
-    line-height: 1.5;
-    color: #244b67;
+
+    text-shadow:
+        0 4px 12px
+        rgba(
+            60,
+            120,
+            160,
+            0.15
+        );
+
+    z-index: 2;
 }
 
-.message #author {
-    position: relative;
-    z-index: 1;
-    color: #7893a5;
-    font-size: 13px;
-    font-weight: bold;
+.spark-a {
+
+    left: 11%;
+
+    top: 25%;
 }
 
-/* BUTTONS */
+.spark-b {
 
-.buttons {
+    right: 12%;
+
+    bottom: 29%;
+}
+
+.spark-c {
+
+    left: 17%;
+
+    bottom: 19%;
+}
+
+
+
+/* =========================================
+   VISUAL CARD AREA
+========================================= */
+
+.visual-wrap {
+
+    height: 415px;
+
     display: flex;
+
+    align-items: center;
+
     justify-content: center;
-    gap: 12px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+
+/* =========================================
+   MINI CARD
+========================================= */
+
+.card-visual {
+
+    width: min(325px, 92%);
+
+    aspect-ratio: 1.08;
+
+    background: #fffdfb;
+
+    border-radius: 26px;
+
+    padding:
+        30px
+        30px
+        26px;
+
+    box-shadow:
+        0 24px 50px
+        rgba(
+            35,
+            88,
+            132,
+            0.22
+        );
+
+    transform: rotate(-3deg);
+
+    position: relative;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.8
+        );
+}
+
+
+/* Pink sticker */
+
+.card-visual::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 50%;
+
+    background: #f5cfe2;
+
+    right: -17px;
+    top: -16px;
+
+    box-shadow:
+        0 5px 12px
+        rgba(
+            70,
+            80,
+            110,
+            0.08
+        );
+}
+
+
+
+/* Mini title */
+
+.mini-title {
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    color: #579dd0;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+
+/* Visual quote */
+
+.visual-quote {
+
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+
+    line-height: 1.18;
+
+    margin:
+        29px
+        0
+        32px;
+
+    color: #244c68;
+}
+
+
+
+/* Bottom decoration */
+
+.visual-line {
+
+    width: 72px;
+
+    height: 8px;
+
+    border-radius: 99px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #68b9ed,
+            #d9ceff
+        );
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 23px;
+}
+
+
+/* Little square */
+
+.mini-mark {
+
+    width: 30px;
+    height: 30px;
+
+    border:
+        2px solid
+        #9bcfee;
+
+    border-radius: 8px;
+
+    position: absolute;
+
+    right: 30px;
+
+    bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #68b9ed;
+
+    font-size: 14px;
+}
+
+
+
+/* =========================================
+   LEFT DESCRIPTION
+========================================= */
+
+.hint {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #255b83;
+
+    font-size: 13px;
+
+    max-width: 320px;
+
+    line-height: 1.7;
+}
+
+.hint strong {
+
+    color: white;
+
+    font-size: 15px;
+}
+
+
+
+/* =========================================
+   RIGHT CONTENT
+========================================= */
+
+.content {
+
+    padding:
+        54px
+        52px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.98
+        );
+}
+
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    width: max-content;
+
+    padding:
+        8px
+        12px;
+
+    border-radius: 999px;
+
+    background: #f0f8ff;
+
+    color: #377aa7;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    margin-bottom: 22px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1em;
+}
+
+
+
+/* Blue dot */
+
+.dot {
+
+    width: 8px;
+    height: 8px;
+
+    background: #72bdf3;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 4px #e0f3ff;
+}
+
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+h1 {
+
+    font-size:
+        clamp(
+            44px,
+            5vw,
+            66px
+        );
+
+    line-height: 0.92;
+
+    letter-spacing: -3.5px;
+
+    margin:
+        0
+        0
+        18px;
+
+    color: #173b58;
+}
+
+h1 em {
+
+    font-family: Georgia, serif;
+
+    font-weight: 500;
+
+    color: #5a91bd;
+}
+
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.intro {
+
+    font-size: 15px;
+
+    line-height: 1.75;
+
+    color: #60798b;
+
+    margin:
+        0
+        0
+        25px;
+
+    max-width: 510px;
+}
+
+
+
+/* =========================================
+   QUOTE BOX
+========================================= */
+
+.quote-box {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f4fbff 0%,
+            #fbf9ff 100%
+        );
+
+    border:
+        1px solid
+        #d8ebf7;
+
+    border-radius: 28px;
+
+    padding:
+        31px
+        29px
+        29px;
+
+    margin-bottom: 18px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            55,
+            113,
+            150,
+            0.07
+        );
+}
+
+
+/* Small sparkle */
+
+.quote-box::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    right: 24px;
+
+    top: 18px;
+
+    color: #c9dded;
+
+    font-size: 20px;
+}
+
+
+/* Large quote mark */
+
+.quote-box::after {
+
+    content: "“";
+
+    position: absolute;
+
+    right: 18px;
+
+    bottom: -42px;
+
+    font-family: Georgia, serif;
+
+    font-size: 150px;
+
+    color: #e3eff9;
+}
+
+
+
+/* =========================================
+   MESSAGE LABEL
+========================================= */
+
+.message-label {
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    color: #7ba0b7;
+
+    margin-bottom: 12px;
+}
+
+.message-label span {
+
+    color: #69add6;
+}
+
+
+
+/* =========================================
+   QUOTE TEXT
+========================================= */
+
+#quote {
+
+    font-family: Georgia, serif;
+
+    font-size: 26px;
+
+    line-height: 1.42;
+
+    margin: 0;
+
+    color: #244b67;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.actions {
+
+    display: flex;
+
+    gap: 10px;
+
     flex-wrap: wrap;
 }
 
-.buttons button {
-    padding: 14px 22px;
-    border-radius: 14px;
-    font-size: 15px;
-    font-weight: bold;
+
+.btn {
+
+    border: 0;
+
+    border-radius: 16px;
+
+    padding:
+        14px
+        19px;
+
+    font-weight: 850;
+
     cursor: pointer;
-    transition: 0.2s;
+
+    transition:
+        0.2s transform,
+        0.2s box-shadow,
+        0.2s background;
 }
 
-#newQuote {
-    border: none;
+.btn:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+
+/* Primary button */
+
+.primary {
+
     background: #5caee7;
+
     color: white;
-    box-shadow: 0 8px 20px rgba(92, 174, 231, 0.25);
+
+    box-shadow:
+        0 10px 22px
+        rgba(
+            92,
+            174,
+            231,
+            0.25
+        );
 }
 
-#copyQuote {
+.primary:active {
+
+    transform:
+        translateY(-1px);
+}
+
+
+
+/* Secondary button */
+
+.secondary {
+
     background: white;
+
     color: #3979a5;
-    border: 1px solid #d5e9f6;
+
+    border:
+        1px solid
+        #d8ebf7;
 }
 
-.buttons button:hover {
-    transform: translateY(-3px);
-}
 
-/* FOOTER */
 
-footer {
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    margin-top: 30px;
+
+    font-size: 10px;
+
     color: #9aabba;
-    font-size: 11px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
 }
 
-footer strong {
+.footer strong {
+
     color: #6487a0;
 }
 
-/* MOBILE */
 
-@media (max-width: 600px) {
 
-    body {
-        padding: 15px;
+/* =========================================
+   COPY TOAST
+========================================= */
+
+.toast {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 24px;
+
+    transform:
+        translate(
+            -50%,
+            20px
+        );
+
+    background: #183b57;
+
+    color: white;
+
+    padding:
+        11px
+        16px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: 0.25s;
+
+    z-index: 5;
+}
+
+.toast.show {
+
+    opacity: 1;
+
+    transform:
+        translate(
+            -50%,
+            0
+        );
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+
+    .app {
+
+        padding: 12px;
     }
 
-    .container {
-        width: 100%;
-        margin: 0;
-        padding: 35px 20px;
-        border-radius: 25px;
+    .shell {
+
+        grid-template-columns: 1fr;
+
+        border-radius: 30px;
     }
 
-    header h1 {
-        font-size: 43px;
+    .brand-side {
+
+        min-height: 520px;
+
+        padding: 30px;
     }
 
-    .message-section h2 {
-        font-size: 38px;
+    .visual-wrap {
+
+        height: 320px;
     }
 
-    .message {
-        padding: 30px 22px;
+    .card-visual {
+
+        width: 275px;
     }
 
-    .message #quote {
-        font-size: 20px;
+    .content {
+
+        padding:
+            38px
+            27px;
     }
 
-    footer {
+    .footer {
+
         flex-direction: column;
-        align-items: center;
     }
+
+    #quote {
+
+        font-size: 22px;
+    }
+
+}
+
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .brand-side {
+
+        padding: 24px;
+
+        min-height: 490px;
+    }
+
+    .logo {
+
+        font-size: 34px;
+    }
+
+    .tagline {
+
+        font-size: 10px;
+    }
+
+    .visual-wrap {
+
+        height: 290px;
+    }
+
+    .card-visual {
+
+        width: 245px;
+
+        padding: 25px;
+    }
+
+    .visual-quote {
+
+        font-size: 24px;
+    }
+
+    .content {
+
+        padding:
+            32px
+            22px;
+    }
+
+    h1 {
+
+        font-size: 48px;
+    }
+
 }
