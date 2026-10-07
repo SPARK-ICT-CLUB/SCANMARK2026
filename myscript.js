@@ -315,6 +315,99 @@ const quotes = [
     "“One day at a time. Kaya natin 'to.”",
 
     "“Hindi man ngayon, may tamang panahon din para sa iyo.”"
+    “Life is short. Order the fries.”
+
+“Everything will be okay. If not, there’s always snacks.”
+
+“You are doing amazing. Please accept this invisible trophy.”
+
+“Sometimes the best plan is to wing it and hope nobody notices.”
+
+“Be yourself. Everyone else is already taken.”
+
+“Your vibe attracts your tribe. Choose one with snacks.”
+
+“A little chaos keeps life interesting.”
+
+“Today’s mood: trying my best and hoping that counts.”
+
+“You survived another day. Honestly, impressive.”
+
+“Don’t worry. You’re only one awkward moment away from another awkward moment.”
+
+“Romanticize your life. Even washing dishes can have a soundtrack.”
+
+“If life gives you lemons, check if there’s sugar nearby.”
+
+“Some days you sparkle. Some days you just exist. Both count.”
+
+“Your bed believes in you. It would also like you to stay.”
+
+“Remember: nobody has it all figured out. Some people just have better Wi-Fi.”
+
+“Take life one snack at a time.”
+
+“You don’t need to have your life together before lunchtime.”
+
+“Plot twist: you were actually doing better than you thought.”
+
+“Main character energy, minor character budget.”
+
+“Stay hydrated and slightly mysterious.”
+
+“If today feels weird, congratulations. You’re having a human experience.”
+
+“Do more of what makes you forget to check the time.”
+
+“Your only competition is yesterday-you. And yesterday-you was probably tired.”
+
+“Be proud of yourself. Even your alarm clock knows you’ve been trying.”
+
+“Some problems need solutions. Others need a nap.”
+
+“You deserve good things, cute things, and an uninterrupted nap.”
+
+“Life update: still figuring it out.”
+
+“No thoughts, just vibes… and maybe snacks.”
+
+“You can’t control everything. Especially other people’s opinions. Good news!”
+
+“If you’re waiting for a sign, this is it. Now go get a snack.”
+
+“Your life doesn’t need to be aesthetic every day.”
+
+“It’s okay to have absolutely no idea what’s going on.”
+
+“Today is a good day to pretend you have a plan.”
+
+“Be soft with yourself. Life already has enough hard edges.”
+
+“You are allowed to change your mind. Preferably before ordering.”
+
+“Sometimes doing nothing is exactly what your brain ordered.”
+
+“You’re not late. You’re making an entrance.”
+
+“A bad day is not a bad life. It’s just a bad episode.”
+
+“Keep your standards high and your expectations of Monday low.”
+
+“Don’t take life too seriously. Nobody gets out with their unread notifications.”
+
+“You’re doing fine. The evidence may be questionable, but still.”
+
+“If you can’t find the sunshine, become the slightly chaotic sunshine.”
+
+“Today’s goal: make at least one memory worth laughing about later.”
+
+“You deserve a life that feels good, not just one that looks good.”
+
+“Laugh a little. You’re already here.”
+
+“Go where you feel appreciated. Or where they have good food.”
+
+“Life is basically a group project where nobody knows the instructions.”
 
 ];
 
