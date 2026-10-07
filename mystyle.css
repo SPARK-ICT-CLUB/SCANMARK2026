@@ -1022,40 +1022,24 @@ h1 em {
         border-radius: 30px; 
     } 
  
-    .brand-side { 
- 
-        min-height: 520px; 
- 
-        padding: 30px; 
-    } 
- 
-    .visual-wrap { 
- 
-        height: 320px; 
-    } 
- 
-    .card-visual { 
- 
-        width: 275px; 
-    } 
- 
-    .content { 
- 
-        padding: 
-            38px 
-            27px; 
-    } 
- 
-    .footer { 
- 
-        flex-direction: column; 
-    } 
- 
-    #quote { 
- 
-        font-size: 30px; 
-    } 
- 
+    .brand-side {
+    min-height: 400px;
+}
+
+.visual-wrap {
+    height: 245px;
+}
+
+.card-visual {
+    width: 210px;
+}
+
+.content {
+    padding: 28px 20px;
+}
+
+h1 {
+    font-size: 38px;
 } 
  
  
