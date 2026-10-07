@@ -2,93 +2,208 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height: 100%;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #bde7ff, #d9ccff);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    color: #244b67;
+    color: #18364d;
 }
 
-.container {
-    width: 100%;
-    max-width: 900px;
-    background: white;
-    border-radius: 30px;
-    padding: 50px;
-    text-align: center;
-    box-shadow: 0 20px 50px rgba(50, 100, 150, 0.2);
-}
-
-h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-    color: #438cc2;
-}
-
-.tagline {
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #7899ad;
-    margin-bottom: 45px;
-}
-
-h2 {
-    font-size: 38px;
-    margin-bottom: 15px;
-}
-
-.message {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    line-height: 1.5;
-    background: #f4faff;
-    border: 1px solid #d8edfa;
-    border-radius: 20px;
-    padding: 35px;
-    margin: 30px 0;
+body {
+    background: linear-gradient(135deg, #dff3ff, #e8ddff);
 }
 
 button {
-    border: none;
-    background: #62afe5;
-    color: white;
-    padding: 14px 25px;
+    font-family: inherit;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+    width: min(900px, 92%);
+    min-height: 90vh;
+    margin: 5vh auto;
+    background: white;
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 20px 60px rgba(36, 91, 138, 0.18);
+    text-align: center;
+}
+
+/* HEADER */
+
+header h1 {
+    margin: 0;
+    font-size: 58px;
+    color: #4b9bd1;
+    letter-spacing: -2px;
+}
+
+.tagline {
+    margin-top: 8px;
+    color: #7193a8;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* MESSAGE SECTION */
+
+.message-section {
+    margin-top: 50px;
+}
+
+.small-title {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 12px;
+    background: #eef8ff;
+    color: #3980ad;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.message-section h2 {
+    margin: 25px 0 15px;
+    font-size: 48px;
+    line-height: 1;
+    color: #244b67;
+}
+
+.description {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #718797;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* QUOTE */
+
+.message {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto 25px;
+    padding: 40px 35px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f3faff, #faf7ff);
+    border: 1px solid #d8ebf8;
+    overflow: hidden;
+}
+
+.quote-mark {
+    position: absolute;
+    right: 20px;
+    top: -25px;
+    font-family: Georgia, serif;
+    font-size: 120px;
+    color: #e2f0fa;
+}
+
+.message #quote {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 18px;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.5;
+    color: #244b67;
+}
+
+.message #author {
+    position: relative;
+    z-index: 1;
+    color: #7893a5;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    padding: 14px 22px;
     border-radius: 14px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-button:hover {
-    transform: translateY(-2px);
+#newQuote {
+    border: none;
+    background: #5caee7;
+    color: white;
+    box-shadow: 0 8px 20px rgba(92, 174, 231, 0.25);
 }
 
-.footer {
+#copyQuote {
+    background: white;
+    color: #3979a5;
+    border: 1px solid #d5e9f6;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+footer {
     margin-top: 40px;
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
     color: #9aabba;
+    font-size: 11px;
 }
+
+footer strong {
+    color: #6487a0;
+}
+
+/* MOBILE */
 
 @media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
     .container {
-        padding: 30px 20px;
+        width: 100%;
+        margin: 0;
+        padding: 35px 20px;
+        border-radius: 25px;
     }
 
-    h1 {
-        font-size: 40px;
+    header h1 {
+        font-size: 43px;
     }
 
-    h2 {
-        font-size: 30px;
+    .message-section h2 {
+        font-size: 38px;
     }
 
     .message {
+        padding: 30px 22px;
+    }
+
+    .message #quote {
         font-size: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
     }
 }
