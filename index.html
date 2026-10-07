@@ -5,95 +5,211 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ScanMark — Scan. Read. Get Inspired.</title>
+    <title>ScanMark — A Little Message For You</title>
 
-    <!-- Connect CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="mystyle.css">
 </head>
 
 <body>
 
-    <main class="container">
+    <main class="app">
 
-        <!-- HEADER -->
-        <header>
-            <h1>ScanMark</h1>
+        <section class="shell">
 
-            <p class="tagline">
-                Scan. Read. Get Inspired.
-            </p>
-        </header>
+            <!-- ========================= -->
+            <!-- LEFT BRAND SECTION -->
+            <!-- ========================= -->
 
+            <div class="brand-side">
 
-        <!-- MAIN MESSAGE -->
-        <section class="message-section">
+                <!-- Decorative bubbles -->
+                <div class="bubble one"></div>
+                <div class="bubble two"></div>
+                <div class="bubble three"></div>
 
-            <p class="small-title">
-                ✦ YOUR SCANMARK MESSAGE
-            </p>
+                <!-- Brand -->
+                <div class="brand-header">
 
-            <h2>
-                Pause.<br>
-                Read this.
-            </h2>
+                    <div class="logo">
+                        Scan<span>Mark</span>
+                    </div>
 
-            <p class="description">
-                You scanned the code, so here's a little reminder
-                made to brighten your day, spark your thoughts,
-                or simply give you a reason to keep going.
-            </p>
+                    <div class="tagline">
+                        Scan. Read. Get Inspired.
+                    </div>
+
+                </div>
 
 
-            <!-- QUOTE BOX -->
-            <div class="message">
+                <!-- Decorative stars -->
+                <span class="spark spark-a">✦</span>
+                <span class="spark spark-b">✧</span>
+                <span class="spark spark-c">•</span>
 
-                <span class="quote-mark">“</span>
 
-                <p id="quote">
-                    You do not have to have everything figured out
-                    to keep moving forward.
-                </p>
+                <!-- Visual Card -->
+                <div class="visual-wrap">
 
-                <span id="author">
-                    — ScanMark
-                </span>
+                    <div class="card-visual">
+
+                        <div class="mini-title">
+                            A LITTLE INSPIRATION
+                        </div>
+
+                        <div class="visual-quote">
+                            “A little message can change the way you see today.”
+                        </div>
+
+                        <div class="visual-line"></div>
+
+                        <div class="mini-mark">
+                            ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Left description -->
+                <div class="hint">
+
+                    <strong>A little message, just for you.</strong>
+
+                    <br>
+
+                    Scan. Read. Keep the good words
+                    with you. ✦
+
+                </div>
 
             </div>
 
 
-            <!-- BUTTONS -->
-            <div class="buttons">
 
-                <button id="newQuote" type="button">
-                    ✦ Get inspired
-                </button>
+            <!-- ========================= -->
+            <!-- RIGHT CONTENT SECTION -->
+            <!-- ========================= -->
 
-                <button id="copyQuote" type="button">
-                    Copy quote
-                </button>
+            <div class="content">
+
+                <!-- Small label -->
+                <div class="eyebrow">
+
+                    <span class="dot"></span>
+
+                    Your ScanMark message
+
+                </div>
+
+
+                <!-- Main heading -->
+                <h1>
+                    Pause.
+                    <br>
+                    <em>Read this.</em>
+                </h1>
+
+
+                <!-- Description -->
+                <p class="intro">
+
+                    You scanned the code, so here's a little
+                    reminder made to brighten your day,
+                    spark your thoughts, or simply give you
+                    a reason to keep going.
+
+                </p>
+
+
+                <!-- ========================= -->
+                <!-- QUOTE CARD -->
+                <!-- ========================= -->
+
+                <div class="quote-box">
+
+                    <div class="message-label">
+
+                        <span>✦</span>
+                        YOUR MESSAGE HAS ARRIVED
+
+                    </div>
+
+
+                    <blockquote id="quote">
+
+                        You do not have to have everything
+                        figured out to keep moving forward.
+
+                    </blockquote>
+
+                </div>
+
+
+                <!-- ========================= -->
+                <!-- BUTTONS -->
+                <!-- ========================= -->
+
+                <div class="actions">
+
+                    <button
+                        class="btn primary"
+                        id="newQuote"
+                        type="button">
+
+                        ✦ Get inspired
+
+                    </button>
+
+
+                    <button
+                        class="btn secondary"
+                        id="copyQuote"
+                        type="button">
+
+                        Copy quote
+
+                    </button>
+
+                </div>
+
+
+                <!-- ========================= -->
+                <!-- FOOTER -->
+                <!-- ========================= -->
+
+                <div class="footer">
+
+                    <span>
+                        Created with
+                        <strong>ScanMark</strong>
+                    </span>
+
+                    <span>
+                        Scan → Read → Get Inspired
+                    </span>
+
+                </div>
 
             </div>
 
         </section>
 
-
-        <!-- FOOTER -->
-        <footer>
-
-            <span>
-                Created with <strong>ScanMark</strong>
-            </span>
-
-            <span>
-                Scan → Read → Get Inspired
-            </span>
-
-        </footer>
-
     </main>
 
 
-    <!-- Connect JavaScript -->
+    <!-- Copy notification -->
+    <div
+        class="toast"
+        id="toast">
+
+        Quote copied!
+
+    </div>
+
+
+    <!-- JavaScript -->
     <script src="myscript.js"></script>
 
 </body>
