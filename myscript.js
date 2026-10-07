@@ -1,67 +1,50 @@
 const quotes = [
-    {
-        text: "You do not have to have everything figured out to keep moving forward.",
-        author: "— ScanMark"
-    },
+    "You do not have to have everything figured out to keep moving forward.",
+    "Keep going. Small steps still move you forward.",
+    "Your pace is still progress.",
+    "Give yourself permission to begin again.",
+    "There is something good waiting for you beyond this moment.",
+    "You are allowed to be a work in progress.",
+    "A little progress today is still worth celebrating.",
+    "Take the next step. You do not need to see the whole path.",
 
-    {
-        text: "Keep going. Small steps still move you forward.",
-        author: "— ScanMark"
-    },
-
-    {
-        text: "Your pace is still progress.",
-        author: "— ScanMark"
-    },
-
-    {
-        text: "Give yourself permission to begin again.",
-        author: "— ScanMark"
-    },
-
-    {
-        text: "There is something good waiting for you beyond this moment.",
-        author: "— ScanMark"
-    },
-
-    {
-        text: "You are allowed to be a work in progress.",
-        author: "— ScanMark"
-    },
-
-    {
-        text: "A little progress today is still worth celebrating.",
-        author: "— ScanMark"
-    },
-
-    {
-        text: "Take the next step. You do not need to see the whole path.",
-        author: "— ScanMark"
-    }
+    "Kaya mo 'yan. Isang hakbang lang bawat araw.",
+    "Hindi mo kailangang maging perpekto para magsimula.",
+    "Darating din ang araw na masasabi mong, sulit pala ang lahat.",
+    "Pahinga kung kailangan, pero huwag susuko.",
+    "Maliit man ang progreso, progreso pa rin.",
+    "May mga bagay na hindi mo kailangang madaliin.",
+    "Maniwala ka sa sarili mo, kahit kaunti lang muna.",
+    "Hindi ka nahuhuli. May sarili kang timeline.",
+    "Okay lang magsimula ulit.",
+    "Hindi lahat ng araw kailangan productive. Minsan, kailangan mo lang huminga.",
+    "May magandang bagay na naghihintay sa dulo ng iyong pagsisikap.",
+    "Unti-unti lang. Hindi naman karera ang buhay.",
+    "Kung pagod ka, pahinga. Huwag sumuko.",
+    "One day at a time. Kaya natin 'to.",
+    "Hindi man ngayon, pero darating din ang tamang panahon.",
+    "You are doing better than you think."
 ];
-
 
 let currentQuote = 0;
 
-
 const quoteElement = document.getElementById("quote");
-const authorElement = document.getElementById("author");
-
 const newQuoteButton = document.getElementById("newQuote");
 const copyQuoteButton = document.getElementById("copyQuote");
 
 
-// CHANGE QUOTE
+// GET A RANDOM QUOTE
 newQuoteButton.addEventListener("click", function () {
 
-    currentQuote++;
+    let randomQuote;
 
-    if (currentQuote >= quotes.length) {
-        currentQuote = 0;
-    }
+    do {
+        randomQuote = Math.floor(Math.random() * quotes.length);
+    } while (randomQuote === currentQuote && quotes.length > 1);
 
-    quoteElement.textContent = quotes[currentQuote].text;
-    authorElement.textContent = quotes[currentQuote].author;
+    currentQuote = randomQuote;
+
+    quoteElement.textContent = quotes[currentQuote];
 
 });
 
@@ -69,14 +52,11 @@ newQuoteButton.addEventListener("click", function () {
 // COPY QUOTE
 copyQuoteButton.addEventListener("click", async function () {
 
-    const textToCopy =
-        quotes[currentQuote].text +
-        " " +
-        quotes[currentQuote].author;
+    const quote = quotes[currentQuote];
 
     try {
 
-        await navigator.clipboard.writeText(textToCopy);
+        await navigator.clipboard.writeText(quote);
 
         copyQuoteButton.textContent = "✓ Copied!";
 
